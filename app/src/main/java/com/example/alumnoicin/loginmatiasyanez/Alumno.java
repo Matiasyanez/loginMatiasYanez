@@ -1,6 +1,7 @@
 package com.example.alumnoicin.loginmatiasyanez;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Created by Alumno ICIN on 30-08-2018.
@@ -8,6 +9,7 @@ import io.realm.RealmObject;
 
 public class Alumno extends RealmObject {
 
+    @PrimaryKey
     private int Rut;
     private String Nombre;
     private int Edad;
@@ -17,13 +19,13 @@ public class Alumno extends RealmObject {
 
     public Alumno() {}
 
-    public Alumno(int Rut, String Nombre, int Edad, String Direccion, int Sueldo, String Cargo){
-        Rut = Rut;
-        Nombre = Nombre;
-        Edad = Edad;
-        Direccion = Direccion;
-        Sueldo = Sueldo;
-        Cargo = Cargo;
+    public Alumno(int rut, String nombre, int edad, String direccion, int sueldo, String cargo){
+        Rut = rut;
+        Nombre = nombre;
+        Edad = edad;
+        Direccion = direccion;
+        Sueldo = sueldo;
+        Cargo = cargo;
     }
 
     public int getRut() {        return Rut;    }
