@@ -57,13 +57,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void execute(Realm realm) {
 
-                Alumno a1 = new Alumno(12345678, "Matias", 25, "ASdad", 2525252, "gasd");
-                Alumno a2 = new Alumno(12435233, "Fernando", 24, "ASdadfffas", 25244452, "gasda");
-                Alumno a3 = new Alumno(64742344, "Matias", 20, "ASdadasdad", 14551, "gasdads");
+                Alumno a1 = new Alumno("12345678", "Matias", 25, "ASdad", 2525252, "gasd");
+                Alumno a2 = new Alumno("12435233", "Fernando", 24, "ASdadfffas", 25244452, "gasda");
+                Alumno a3 = new Alumno("64742344", "Matias", 20, "ASdadasdad", 14551, "gasdads");
+                Alumno a4 = new Alumno("5151512", "Matias", 20, "ASdadasdad", 14551, "gasdads");
+                Alumno a5 = new Alumno("64742344", "Matias", 20, "ASdadasdad", 14551, "gasdads");
 
                 realm.copyToRealmOrUpdate(a1);
                 realm.copyToRealmOrUpdate(a2);
                 realm.copyToRealmOrUpdate(a3);
+                realm.copyToRealmOrUpdate(a4);
+                realm.copyToRealmOrUpdate(a5);
 
                 Alumno = getAllAlumno();
             }

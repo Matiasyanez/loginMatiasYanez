@@ -10,7 +10,7 @@ import io.realm.annotations.PrimaryKey;
 public class Alumno extends RealmObject {
 
     @PrimaryKey
-    private int Rut;
+    private String Rut;
     private String Nombre;
     private int Edad;
     private String Direccion;
@@ -19,7 +19,7 @@ public class Alumno extends RealmObject {
 
     public Alumno() {}
 
-    public Alumno(int rut, String nombre, int edad, String direccion, int sueldo, String cargo){
+    public Alumno(String rut, String nombre, int edad, String direccion, int sueldo, String cargo){
         Rut = rut;
         Nombre = nombre;
         Edad = edad;
@@ -28,9 +28,9 @@ public class Alumno extends RealmObject {
         Cargo = cargo;
     }
 
-    public int getRut() {        return Rut;    }
+    public String getRut() {        return Rut;    }
 
-    public void setRut(int rut) {        Rut = rut;    }
+    public void setRut(String rut) {        Rut = rut;    }
 
     public String getNombre() {        return Nombre;    }
 
